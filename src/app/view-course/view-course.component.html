@@ -1,0 +1,23 @@
+<div class="col-md-6 offset-md-3">
+    <h3 class="text-center"><u>Course Details</u></h3>
+        <div>
+            <label><b>Subject Id:</b></label>
+            <input disabled class="form-control mt-1" value="{{course.subId}}">
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <label><b>Subject Name: </b></label>
+                <input disabled class="form-control mt-1" value="{{course.subName}}">
+            </div>
+            <div class="col-md-6">
+                <label><b>Price: </b></label>
+                <input disabled class="form-control mt-1" value="{{course.price}}">
+            </div>
+        </div>
+        <div class="col-md-6">
+                <label><b>Teacher Name: </b></label>
+                <input disabled class="form-control mt-1" value="{{course.teacher.firstName}}  {{course.teacher.lastName}}">
+        </div>
+        <br>
+        <button (click)="goToCourseList()" class="btn btn-primary">Back to Course List</button>
+</div>

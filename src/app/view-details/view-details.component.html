@@ -1,0 +1,39 @@
+<div class="col-md-6 offset-md-3">
+<h3 class="text-center"><u>Teacher Details</u></h3>
+    <div>
+        <label><b>Teacher Id:</b></label>
+        <input disabled class="form-control mt-1" value="{{teacher.id}}">
+    </div>
+    <div class="row">
+        <div class="col-md-6">
+            <label><b>First Name: </b></label>
+            <input disabled class="form-control mt-1" value="{{teacher.firstName}}">
+        </div>
+        <div class="col-md-6">
+            <label><b>Last Name: </b></label>
+            <input disabled class="form-control mt-1" value="{{teacher.lastName}}">
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6">
+            <label><b>Email: </b></label>
+            <input disabled class="form-control mt-1" value="{{teacher.email}}">
+        </div>
+        <div class="col-md-6">
+            <label><b>Contact: </b></label>
+            <input disabled class="form-control mt-1" value="{{teacher.contact}}">
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6">
+            <label><b>User Name: </b></label>
+            <input disabled class="form-control mt-1" value="{{teacher.userName}}">
+        </div>
+        <div class="col-md-6">
+            <label><b>Password: </b></label>
+            <input disabled class="form-control mt-1" value="{{teacher.password}}">
+        </div>
+    </div>
+    <br>
+    <button (click)="goToTeacherList()" class="btn btn-primary">Back to Teacher List</button>
+</div>

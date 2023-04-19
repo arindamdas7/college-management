@@ -1,0 +1,87 @@
+<h3 class="text-center"><u>Update Teacher</u></h3>
+<form [formGroup]="form" (ngSubmit)="onSubmit()">
+    <div class="container">
+        <div class="form-group">
+            <label>First Name:</label>
+            <input formControlName="firstname" type="text" class="form-control" id="fname" name="firstName"
+            [(ngModel)]="teacher.firstName">
+        </div>
+        <div *ngIf="f['firstname'].touched && f['firstname'].invalid" class="alert alert-danger">
+            <div *ngIf="f['firstname'].errors && f['firstname'].errors['required']">
+                First Name is mandatory**
+            </div>
+            <div *ngIf="f['firstname'].errors && f['firstname'].errors['minlength']">
+                Minimum length must be 3 characters**
+            </div>
+        </div>
+        <div class="form-group">
+            <label>Last Name:</label>
+            <input formControlName="lastname" type="text" class="form-control" id="lname" name="lastName"
+            [(ngModel)]="teacher.lastName">
+        </div>
+        <div *ngIf="f['lastname'].touched && f['lastname'].invalid" class="alert alert-danger">
+            <div *ngIf="f['lastname'].errors && f['lastname'].errors['required']">
+                Last Name is mandatory**
+            </div>
+            <div *ngIf="f['lastname'].errors && f['lastname'].errors['minlength']">
+                Minimum length must be 2 characters**
+            </div>
+        </div>
+        <div class="form-group">
+            <label>Contact:</label>
+            <input formControlName="contact" type="text" class="form-control" id="contact" name="contact"
+            [(ngModel)]="teacher.contact">
+        </div>
+        <div *ngIf="f['contact'].touched && f['contact'].invalid" class="alert alert-danger">
+            <div *ngIf="f['contact'].errors && f['contact'].errors['required']">
+                Contact is mandatory**
+            </div>
+            <div *ngIf="f['contact'].errors && f['contact'].errors['minlength']">
+                Minimum length must be 10 characters**
+            </div>
+        </div>
+        <div class="form-group">
+            <label>Email:</label>
+            <input formControlName="email" type="email" class="form-control" id="email" name="email"
+            [(ngModel)]="teacher.email">
+        </div>
+        <div *ngIf="f['email'].touched && f['email'].invalid" class="alert alert-danger">
+            <div *ngIf="f['email'].errors && f['email'].errors['required']">
+            Email is mandatory**
+            </div>
+            <div *ngIf="f['email'].errors && f['email'].errors['email']">
+                Please enter the correct email**
+            </div>
+        </div>
+        <div class="form-group">
+            <label>User Name:</label>
+            <input formControlName="username" type="text" class="form-control" id="username" name="userName"
+            [(ngModel)]="teacher.userName">
+        </div>
+        <div *ngIf="f['username'].touched && f['username'].invalid" class="alert alert-danger">
+            <div *ngIf="f['username'].errors && f['username'].errors['required']">
+                User Name is mandatory**
+            </div>
+            <div *ngIf="f['username'].errors && f['username'].errors['minlength']">
+                Minimum length must be 6 characters**
+            </div>
+        </div>
+        <div class="form-group">
+            <label>Password:</label>
+            <input formControlName="password" type="password" class="form-control" id="password" name="password"
+            [(ngModel)]="teacher.password">
+        </div>
+        <div *ngIf="f['password'].touched && f['password'].invalid" class="alert alert-danger">
+            <div *ngIf="f['password'].errors && f['password'].errors['required']">
+                Password is mandatory**
+            </div>
+            <div *ngIf="f['password'].errors && f['password'].errors['minlength']">
+                Minimum length must be 6 characters**
+            </div>
+        </div>
+
+        <br>
+        
+        <button class="btn btn-success" type="submit">Submit</button>
+    </div>
+</form>
